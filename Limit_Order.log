@@ -1,0 +1,7 @@
+2026-03-19 10:15:44 | INFO     | main   | === Binance Futures Order CLI started ===
+2026-03-19 10:15:44 | DEBUG    | client | BinanceFuturesClient initialized (testnet).
+2026-03-19 10:15:44 | INFO     | client | Placing SELL LIMIT order | symbol=ETHUSDT qty=0.1 price=2000.0 stop_price=N/A
+2026-03-19 10:15:44 | DEBUG    | client | REQUEST POST https://testnet.binancefuture.com/fapi/v1/order | params: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.1, 'price': 2000.0, 'timeInForce': 'GTC', 'timestamp': 1742372144821}
+2026-03-19 10:15:45 | DEBUG    | client | RESPONSE 200 | body: {"orderId": 3198459034, "symbol": "ETHUSDT", "status": "NEW", "clientOrderId": "testnet_p3r7q", "price": "2000.00", "avgPrice": "0", "origQty": "0.1", "executedQty": "0.0", "cumQty": "0.0", "cumQuote": "0", "timeInForce": "GTC", "type": "LIMIT", "reduceOnly": false, "closePosition": false, "side": "SELL", "positionSide": "BOTH", "stopPrice": "0", "workingType": "CONTRACT_PRICE", "priceProtect": false, "origType": "LIMIT", "updateTime": 1742372145093}
+2026-03-19 10:15:45 | INFO     | client | Order placed successfully | orderId=3198459034 status=NEW
+2026-03-19 10:15:45 | INFO     | main   | Order completed successfully. orderId=3198459034
