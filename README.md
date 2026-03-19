@@ -46,15 +46,16 @@ set BINANCE_API_SECRET=your_api_secret
 python3 test_mock.py
 ```
 
-Output:
- Valid MARKET BUY — passed
- Valid LIMIT SELL — passed
- Valid STOP-LIMIT SELL — passed
- Invalid side caught — passed
- LIMIT without price caught — passed
- Market BUY order mock — passed
- Limit SELL order mock — passed
- Stop-Limit SELL order mock — passed
+✅ Valid MARKET BUY — passed
+✅ Valid LIMIT SELL — passed
+✅ Valid STOP-LIMIT SELL — passed
+✅ Invalid side caught — passed
+✅ LIMIT without price caught — passed
+✅ Market BUY order mock — passed
+✅ Limit SELL order mock — passed
+✅ Stop-Limit SELL order mock — passed
+...
+🎉 All 16 tests passed!
 
 ## Step 5 — Place Orders
 
