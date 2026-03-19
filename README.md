@@ -1,22 +1,31 @@
-# Binance Futures Testnet
-A Python CLI tool to place Market, Limit, and Stop-Limit orders on Binance Futures Testnet.
+# Binance Futures Testnet 
+
+A Python CLI tool to place Market, Limit, and Stop-Limit orders on Binance USDT-M Futures Testnet.
+
+---
 
 ## Project Files
 
-1. client.py --  Handles API calls, request signing, error handling
-2. main.py --   CLI interface, input validation, output formatting
-3. test_mock.py --  Test suite (no API keys needed)
-4. requirements.txt --  Dependencies
-5. logs/
-    5.1 market_order.log
-    5.2 limit_order.log
-    5.3 stop_limit_order.log
+```
+client.py --  Handles API calls, request signing, error handling
+main.py   --  CLI interface, input validation, output formatting
+test_mock.py  --  Test suite (no API keys needed)
+requirements.txt --  Dependencies
+logs/
+    ├── market_order.log
+    ├── limit_order.log
+    └── stop_limit_order.log
+```
 
-# Setup steps:
+---
 
 ## Step 1 — Install Dependencies
 
-bash pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
+
+---
 
 ## Step 2 — Get Testnet API Keys
 
@@ -24,6 +33,8 @@ bash pip install -r requirements.txt
 2. Log in with Google / Apple / Telegram
 3. Click **API Key** → **Generate**
 4. Copy your API Key and Secret
+
+---
 
 ## Step 3 — Set Your Credentials
 
@@ -38,6 +49,7 @@ export BINANCE_API_SECRET=your_api_secret
 set BINANCE_API_KEY=your_api_key
 set BINANCE_API_SECRET=your_api_secret
 ```
+
 ---
 
 ## Step 4 — Run Tests (No API Keys Needed)
@@ -46,16 +58,21 @@ set BINANCE_API_SECRET=your_api_secret
 python3 test_mock.py
 ```
 
-✅ Valid MARKET BUY — passed
-✅ Valid LIMIT SELL — passed
-✅ Valid STOP-LIMIT SELL — passed
-✅ Invalid side caught — passed
-✅ LIMIT without price caught — passed
-✅ Market BUY order mock — passed
-✅ Limit SELL order mock — passed
-✅ Stop-Limit SELL order mock — passed
+Output:
+```
+ Valid MARKET BUY — passed
+ Valid LIMIT SELL — passed
+ Valid STOP-LIMIT SELL — passed
+ Invalid side caught — passed
+ LIMIT without price caught — passed
+ Market BUY order mock — passed
+ Limit SELL order mock — passed
+ Stop-Limit SELL order mock — passed
 ...
-🎉 All 16 tests passed!
+ All 16 tests passed!
+```
+
+---
 
 ## Step 5 — Place Orders
 
@@ -78,28 +95,35 @@ python3 main.py --symbol BTCUSDT --side SELL --type STOP --quantity 0.01 --stop-
 
 ## Sample Output
 
-
-ORDER REQUEST SUMMARY
-
+```
+───────────────────────────────────────
+    ORDER REQUEST SUMMARY
+───────────────────────────────────────
   Symbol     : BTCUSDT
   Side       : BUY
   Type       : MARKET
   Quantity   : 0.001
+───────────────────────────────────────
 
-
-ORDER RESPONSE
-
+───────────────────────────────────────
+    ORDER RESPONSE
+───────────────────────────────────────
   Order ID    : 3198452761
   Status      : FILLED
   Executed Qty: 0.001
   Avg Price   : 84321.50
-
+───────────────────────────────────────
     Order placed successfully!
+───────────────────────────────────────
+```
 
+---
 
 ## Logs
 
 Every order is automatically logged to `binance_futures.log`. Sample logs for all three order types are in the `logs/` folder.
+
+---
 
 ## Assumptions
 
